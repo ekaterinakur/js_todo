@@ -30,7 +30,7 @@ class Todo {
   getItem(id) {
     const item = this.todosList.find(todo => todo.id === id);
 
-    if (item) { return item; }
+    if (item) return item;
 
     return null;
   }
