@@ -1,3 +1,5 @@
+'use strict';
+
 class Todo {
   constructor() {
     this.todosList = [];
@@ -36,7 +38,6 @@ class Todo {
   }
 
   next() {
-    try {
       const maxPriorityItem = Math.max(...this.todosList.map(todo => todo.priority));
       
       if (!this.todosList.length || maxPriorityItem === NaN) {
@@ -44,9 +45,6 @@ class Todo {
       } 
 
       return this.todosList.find(todo => todo.priority === maxPriorityItem);;
-    } catch(error) {
-      return error.message;
-    }
   }
 }
 
